@@ -7,5 +7,4 @@ class InfoBox(models.Model):
 	location = models.CharField(max_length=120)
 	City = models.CharField(max_length= 40)
 	Time = models.DateTimeField(default=datetime.now())
-	Rolik = models.URLField()
 	ClickNumbes = models.IntegerField()
