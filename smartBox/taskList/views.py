@@ -8,8 +8,18 @@ def get_url(request):
 #	Id_link = Path..split('/')
 	try:
 		Link = request.params.get('id')
+		add_click(request)
 		return redirect(Link)
 	except MyModel.DoesNotExist:
 
 		raise Http404("No MyModel matches the given query.")
+"""
+def  add_click(url):
+	TaskList.objects.remove(++)
+"""
+def get_statictic(request):
+	pass
+
+def get_actions(request):
+	pass
 
