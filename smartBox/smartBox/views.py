@@ -1,11 +1,12 @@
 from django.shortcuts import render , redirect
+from django.http import HttpResponse
 from taskList.models import TaskList
 from django.http import Http404
 
 
 
 def Home(request):
-		return("Hello world!!")
+		return(HttpResponse("Hello world!!"))
 
 def get_url(request):
 #	Path = request.path
