@@ -17,11 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from  taskList import views as task
+
+from django.conf.urls import include, url
+from django.contrib import admin
+from django.urls import path
+
+admin.autodiscover()
+
 def Home(request):
 	 return(request)
 
 urlpatterns = [
 	path('', views.Home),
 	path('?id=<Number>', task.get_url),
-    path('admin/', admin.sites.urls),
+    path('admin/',  admin.site.urls),
+
 ]
