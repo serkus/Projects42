@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from taskList.models import TaskList
+from .models import TaskList
 from django.http import Http404
 
 def get_url(request):

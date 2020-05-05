@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    border-bottom: 1px solid #E7E8F2; }
+    .page .header .logo {
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px; }
+      .page .header .logo__num {
+        background: #4A48D2;
+        border-radius: 12px;
+        padding: 10px;
+        color: #fff; }
+      .page .header .logo__name {
+        padding-left: 13px;
+        text-transform: uppercase; }
+  .page .content {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    padding: 30px 30px 0; }
+    .page .content .title {
+      padding-left: 200px;
+      flex: 0 1 42%; }
+      .page .content .title__text {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 61px;
+        color: #00CD98;
+        display: block;
+        margin-bottom: 40px;
+        padding-left: 5px;
+        max-width: 550px; }
+      .page .content .title__btn {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 20px 41px;
+        background: #4A48D2;
+        border-radius: 12px;
+        transition: all .7s ease;
+        cursor: pointer;
+        outline: none;
+        border: none; }
+        .page .content .title__btn:hover {
+          background: #3836a8;
+          color: #E7E8F2; }
+    .page .content .right {
+      flex: 1 1 58%; }
+      .page .content .right img {
+        width: 100%;
+        height: 100%; }
+
+/*# sourceMappingURL=infoBox.css.map */

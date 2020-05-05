@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>42 SME</title>
+    {% load static %}
+    <link href="{% static 'styles/infoBox.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="logo">
+            <span class="logo__num">43</span>
+            <span class="logo__name">SME</span>
+        </div>
+        <a href="" class="user">
+            <div class="user__settings settings">
+                <svg width="81" height="70" viewBox="0 0 81 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="small" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M64.1362 39.6364C66.6215 39.6364 68.6362 37.6216 68.6362 35.1364C68.6362 32.6511 66.6215 30.6364 64.1362 30.6364C61.6509 30.6364 59.6362 32.6511 59.6362 35.1364C59.6362 37.6216 61.6509 39.6364 64.1362 39.6364Z"
+                          stroke="#A7A9C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="big" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M74.7636 39.3636C74.3675 40.2612 74.5576 41.3095 75.2436 42.0109L75.3309 42.0982C75.8772 42.6438 76.1841 43.3843 76.1841 44.1564C76.1841 44.9285 75.8772 45.6689 75.3309 46.2145C74.7853 46.7608 74.0448 47.0677 73.2727 47.0677C72.5006 47.0677 71.7602 46.7608 71.2145 46.2145L71.1273 46.1273C70.4259 45.4412 69.3776 45.2511 68.48 45.6473C67.6008 46.0241 67.0293 46.8871 67.0255 47.8436V48.0909C67.0255 49.6976 65.723 51 64.1164 51C62.5097 51 61.2073 49.6976 61.2073 48.0909V47.96C61.1842 46.9748 60.5613 46.1038 59.6364 45.7636C58.7388 45.3675 57.6905 45.5576 56.9891 46.2436L56.9018 46.3309C56.3562 46.8772 55.6157 47.1841 54.8436 47.1841C54.0715 47.1841 53.3311 46.8772 52.7855 46.3309C52.2392 45.7853 51.9323 45.0448 51.9323 44.2727C51.9323 43.5006 52.2392 42.7602 52.7855 42.2145L52.8727 42.1273C53.5588 41.4259 53.7489 40.3776 53.3527 39.48C52.9759 38.6008 52.1129 38.0293 51.1564 38.0255H50.9091C49.3024 38.0255 48 36.723 48 35.1164C48 33.5097 49.3024 32.2073 50.9091 32.2073H51.04C52.0252 32.1842 52.8962 31.5613 53.2364 30.6364C53.6325 29.7388 53.4424 28.6905 52.7564 27.9891L52.6691 27.9018C52.1228 27.3562 51.8159 26.6157 51.8159 25.8436C51.8159 25.0715 52.1228 24.3311 52.6691 23.7855C53.2147 23.2392 53.9552 22.9323 54.7273 22.9323C55.4994 22.9323 56.2398 23.2392 56.7855 23.7855L56.8727 23.8727C57.5741 24.5588 58.6224 24.7489 59.52 24.3527H59.6364C60.5156 23.9759 61.0871 23.1129 61.0909 22.1564V21.9091C61.0909 20.3024 62.3934 19 64 19C65.6066 19 66.9091 20.3024 66.9091 21.9091V22.04C66.9129 22.9966 67.4844 23.8595 68.3636 24.2364C69.2612 24.6325 70.3095 24.4424 71.0109 23.7564L71.0982 23.6691C71.6438 23.1228 72.3843 22.8159 73.1564 22.8159C73.9285 22.8159 74.6689 23.1228 75.2145 23.6691C75.7608 24.2147 76.0677 24.9552 76.0677 25.7273C76.0677 26.4994 75.7608 27.2398 75.2145 27.7855L75.1273 27.8727C74.4412 28.5741 74.2511 29.6224 74.6473 30.52V30.6364C75.0241 31.5156 75.8871 32.0871 76.8436 32.0909H77.0909C78.6976 32.0909 80 33.3934 80 35C80 36.6066 78.6976 37.9091 77.0909 37.9091H76.96C76.0034 37.9129 75.1405 38.4844 74.7636 39.3636Z"
+                          stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="user__bell bell">
+                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.9007 28.6776L25.4968 24.6231C24.3866 22.7517 23.8 20.6082 23.8 18.4266V14.875C23.8 10.3913 20.843 6.59886 16.7997 5.37625V2.83336C16.7997 1.27075 15.5438 0 13.9995 0C12.4552 0 11.1994 1.27075 11.1994 2.83336V5.37625C7.15608 6.59886 4.19917 10.3913 4.19917 14.875V18.4266C4.19917 20.6082 3.61252 22.7503 2.50368 24.6217L0.0998084 28.6762C-0.0303967 28.8958 -0.0332186 29.1678 0.0914081 29.3902C0.216035 29.6126 0.447044 29.7501 0.699054 29.7501H27.3001C27.5521 29.7501 27.7845 29.6127 27.9091 29.3917C28.0337 29.1706 28.0295 28.8958 27.9007 28.6776Z"
+                          fill="#9A9CAC"/>
+                </svg>
+
+            </div>
+            <div class="user__info">
+                <div class="avatar">
+                    <img src="{% static 'img/avatar.png'%}" alt="">
+                </div>
+                <div class="name"><span>Евгений Петров</span></div>
+            </div>
+        </a>
+    </header>
+    <div class="content">
+        <aside class="sidebar">
+            <div class="menu">
+                <a href="" class="menu__item active">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8676 17.5279C22.513 17.3332 22.0677 17.4627 21.873 17.8172C21.6783 18.1717 21.8078 18.617 22.1623 18.8118C23.0348 19.2911 23.5352 19.8224 23.5352 20.2696C23.5352 20.8165 22.7603 21.6642 20.5853 22.4031C18.4366 23.1332 15.5652 23.5352 12.5 23.5352C9.43481 23.5352 6.56338 23.1332 4.4147 22.4031C2.23975 21.6642 1.46484 20.8165 1.46484 20.2696C1.46484 19.8224 1.96523 19.2911 2.8377 18.8117C3.19224 18.617 3.32173 18.1717 3.12695 17.8171C2.93218 17.4626 2.48701 17.3331 2.13237 17.5279C1.15962 18.0623 0 18.9718 0 20.2696C0 21.2644 0.68418 22.6828 3.94346 23.7901C6.23994 24.5703 9.27871 25 12.5 25C15.7213 25 18.7601 24.5703 21.0565 23.7901C24.3158 22.6828 25 21.2644 25 20.2696C25 18.9718 23.8404 18.0623 22.8676 17.5279Z"
+                              fill="#9A9CAC"/>
+                        <path d="M6.97031 21.3442C8.45713 21.7643 10.4209 21.9956 12.5 21.9956C14.5791 21.9956 16.5429 21.7643 18.0297 21.3442C19.8487 20.8304 20.771 20.0866 20.771 19.1336C20.771 18.1805 19.8487 17.4367 18.0297 16.9229C17.6259 16.8088 17.1867 16.7088 16.7198 16.6234C16.4663 17.0615 16.2006 17.5125 15.9228 17.9764C16.4396 18.0539 16.9248 18.149 17.3654 18.2612C18.7041 18.6022 19.1932 18.986 19.2937 19.1336C19.1931 19.2812 18.7042 19.665 17.3655 20.006C16.0984 20.3287 14.4683 20.5128 12.7513 20.5292C12.6682 20.5354 12.5844 20.5388 12.5 20.5388C12.4156 20.5388 12.3318 20.5354 12.2486 20.5292C10.5317 20.5128 8.90151 20.3287 7.63447 20.006C6.2958 19.665 5.80679 19.2812 5.70625 19.1336C5.80679 18.986 6.29585 18.6022 7.63452 18.2612C8.07515 18.149 8.56035 18.0539 9.0772 17.9764C8.79941 17.5125 8.53374 17.0615 8.28018 16.6234C7.81328 16.7088 7.37407 16.8088 6.97031 16.9229C5.15132 17.4367 4.229 18.1805 4.229 19.1336C4.229 20.0866 5.15132 20.8304 6.97031 21.3442Z"
+                              fill="#9A9CAC"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M14.0844 18.1852C13.7442 18.7417 13.152 19.0739 12.5 19.0739C11.848 19.0739 11.2558 18.7417 10.9156 18.1852C8.53237 14.2859 5.69141 9.14697 5.69141 6.80855C5.69141 3.0543 8.7457 0 12.5 0C16.2543 0 19.3086 3.0543 19.3086 6.80855C19.3086 9.14697 16.4677 14.2859 14.0844 18.1852ZM12.5 3.60448C10.991 3.60448 9.76334 4.83211 9.76334 6.34105C9.76334 7.85008 10.991 9.07767 12.5 9.07767C14.009 9.07767 15.2367 7.85003 15.2367 6.34105C15.2367 4.83211 14.009 3.60448 12.5 3.60448Z"
+                              fill="#9A9CAC"/>
+                    </svg>
+                    <span>Карта</span>
+                </a>
+                <a href="" class="menu__item">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15C19.2691 19.0501 15.0202 21.4919 11 21C6.20596 20.341 2.72305 16.8895 2 12C1.4742 8.06822 3.86164 3.78175 8 2"
+                              stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M22 11C22 8.34784 20.9464 5.8043 19 4C17.1957 2.05357 14.6522 1 12 1V11H22Z"
+                              stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <span>Отчеты</span>
+                </a>
+                <a href=""
+                   class="menu__item {% if request.resolver_match.url_name == 'my_view_name' %} active {% endif %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.4443 7V11.4444" stroke="#9A9CAC" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M6.55566 7V11.4444" stroke="#9A9CAC" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M1 16H21" stroke="#9A9CAC" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <rect x="1" y="1" width="20" height="20" rx="2" stroke="#9A9CAC" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Календарь</span>
+                </a>
+                <a href="" class="menu__item">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 19V17C17 14.7909 15.2091 13 13 13H5C2.79086 13 1 14.7909 1 17V19" stroke="#9A9CAC"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M9 9C11.2091 9 13 7.20914 13 5C13 2.79086 11.2091 1 9 1C6.79086 1 5 2.79086 5 5C5 7.20914 6.79086 9 9 9Z"
+                              stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <span>Пользователь</span>
+                </a>
+                <a href="" class="menu__item mail">
+                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M19 0H3C1.3 0 0 1.3 0 3V15C0 16.7 1.3 18 3 18H19C20.7 18 22 16.7 22 15V3C22 1.3 20.7 0 19 0ZM3 2H19C19.4 2 19.7 2.2 19.9 2.6L11 8.8L2.1 2.6C2.3 2.2 2.6 2 3 2ZM2 15C2 15.6 2.4 16 3 16H19C19.6 16 20 15.6 20 15V4.89999L11.6 10.8C11.4 10.9 11.2 11 11 11C10.8 11 10.6 10.9 10.4 10.8L2 4.89999V15Z"
+                              fill="#A7A9C0"/>
+                    </svg>
+                    <span class="mail__text">Почта</span>
+                    <span class="mail__num">3</span>
+                </a>
+
+                <div class="raport">
+                    <a href="" class="raport__pdf">PDF отчет</a>
+                    <a href="" class="raport__download">Скачать отчет</a>
+                    <button class="raport__upload"><span></span><span>Загрузка</span>
+                        <span>
+                    <svg width="17" height="17" viewBox="0 0 17 17"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7166 11V14.3333C15.7166 15.2538 15.0001 16 14.1163 16H2.91426C2.03044 16 1.31396 15.2538 1.31396 14.3333V11"
+                                  stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.51465 6.83334L8.51539 11L12.5161 6.83334" stroke="#9A9CAC" stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M8.51514 11V1" stroke="#9A9CAC" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="controls">
+                <div class="black_white">
+                    <span>Темная тема</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="collapse">
+                    Свернуть
+                </div>
+            </div>
+
+        </aside>
+        <div class="market">
+            <div class="title">Карта умных остановок</div>
+            <div class="maps">
+                <img class="shape1" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape2" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape3" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape4" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape5" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape6" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape7" src="{% static 'img/Shape.png'%}" alt="">
+                <img class="shape8" src="{% static 'img/Shape.png'%}" alt="">
+                <img src="{% static 'img/map.png'%}" alt="">
+                <!--                <div id="map"></div>-->
+                <!--                <script>-->
+
+                <!--                    function initMap() {-->
+                <!--                        var myLatLng = {lat: 56.315848, lng: 43.9939578};-->
+
+                <!--                        // Настройки карты-->
+                <!--                        var map = new google.maps.Map(document.getElementById('map'), {-->
+                <!--                            zoom: 20,-->
+                <!--                            center: myLatLng, // Координаты и центрирование по метке-->
+                <!--                            disableDefaultUI: true,-->
+                <!--                            mapTypeControl: true,-->
+                <!--                            styles: [-->
+                <!--                                {-->
+                <!--                                    "stylers": [-->
+                <!--                                        {-->
+                <!--                                            "hue": "#007fff"-->
+                <!--                                        },-->
+                <!--                                        {-->
+                <!--                                            "saturation": 89-->
+                <!--                                        }-->
+                <!--                                    ]-->
+                <!--                                },-->
+                <!--                                {-->
+                <!--                                    "featureType": "water",-->
+                <!--                                    "stylers": [-->
+                <!--                                        {-->
+                <!--                                            "color": "#ffffff"-->
+                <!--                                        }-->
+                <!--                                    ]-->
+                <!--                                },-->
+                <!--                                {-->
+                <!--                                    "featureType": "administrative.country",-->
+                <!--                                    "elementType": "labels",-->
+                <!--                                    "stylers": [-->
+                <!--                                        {-->
+                <!--                                            "visibility": "off"-->
+                <!--                                        }-->
+                <!--                                    ]-->
+                <!--                                }-->
+                <!--                            ]-->
+
+                <!--                        });-->
+
+                <!--                        var image = new google.maps.MarkerImage(-->
+                <!--                            "{% static 'img/Shape.png' %}",-->
+                <!--                            new google.maps.Size(70, 70), //размер изображения иконки в пикселях-->
+                <!--                            new google.maps.Point(0, 0), //позиционирование иконки-->
+                <!--                            new google.maps.Point(65, 65) //центр иконки-->
+                <!--                        );-->
+
+                <!--                        var marker = new google.maps.Marker({-->
+                <!--                            position: myLatLng,-->
+                <!--                            icon: image,-->
+                <!--                            map: map,-->
+                <!--                            title: 'Умнаяя остановка на Большой Покровской'-->
+                <!--                        });-->
+                <!--                    }-->
+                <!--                </script>-->
+                <!--                <script async defer-->
+                <!--                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmY9bljrq9w0XtcHe_OW3c9Q6Hg4JSx8&callback=initMap">-->
+                <!--                </script>-->
+
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Остановка</th>
+                        <th>Qr-переходы</th>
+                        <th>Стоимость клика</th>
+                        <th>Активное время</th>
+                        <th>Продолжительность показа</th>
+                        <th>Возраст пользователя</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Улица Звездинка</td>
+                        <td>1 203</td>
+                        <td>3 875</td>
+                        <td>09:25</td>
+                        <td>02:12</td>
+                        <td>37</td>
+                    </tr>
+                    <tr>
+                        <td>165 Лицей</td>
+                        <td>569</td>
+                        <td>884</td>
+                        <td>07:45</td>
+                        <td>03:03</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>Улица Краснодонцев</td>
+                        <td>351</td>
+                        <td>537</td>
+                        <td>08:04</td>
+                        <td>01:35</td>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <td>Проспект Гагарина</td>
+                        <td>113</td>
+                        <td>476</td>
+                        <td>13:03</td>
+                        <td>02:29</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Площадь Свободы</td>
+                        <td>1 074</td>
+                        <td>2 598</td>
+                        <td>07:38</td>
+                        <td>01:22</td>
+                        <td>30</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="qrtrans">
+                <div class="buttons">
+                    <button class="item">
+                        Сегодня
+                    </button>
+                    <button class="item">
+                        Вчера
+                    </button>
+                    <button class="item">
+                        Неделя
+                    </button>
+                    <button class="item">
+                        Месяц
+                    </button>
+                    <button class="item">
+                        Квартал
+                    </button>
+                    <button class="item">
+                        Год
+                    </button>
+                </div>
+                <div class="chart1">
+                    <img src="{% static 'img/trans.png' %}" alt="">
+                </div>
+                <div class="chart2">
+                    <img src="{% static 'img/chart2.png' %}" alt="">
+                </div>
+                <div class="chart_groops">
+                    <div class="ch1">
+                        <img src="{% static 'img/age.png' %}" alt="">
+
+                    </div>
+                    <div class="cont">
+                        <div class="ch-cont">
+                            <div class="ch2">
+                                <img src="{% static 'img/ch2.png' %}" alt="">
+                            </div>
+                            <div class="ch3">
+                                <img src="{% static 'img/ch3.png' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="ch4">
+                            <img src="{% static 'img/ch4.png' %}" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+<!--key google maps-->
+
+<!--56.315712, 43.993338-->

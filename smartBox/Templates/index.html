@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>42 SME</title>
+    <!--	<style type="text/css">-->
+
+    <!--		.login{ position:fixed; left: 0px; top:0px; width: 100vw; height:100vh; justify:center;  }-->
+    <!--	</style>-->
+    {% load static %}
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="logo">
+            <span class="logo__num">43</span>
+            <span class="logo__name">SME</span>
+        </div>
+        <div class="user">
+            <a href="/dashboard">
+                <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 27.75V24.8611C24 21.6701 21.4256 19.0833 18.25 19.0833H6.75C3.57436 19.0833 1 21.6701 1 24.8611V27.75"
+                          stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.5 13.3056C15.6756 13.3056 18.25 10.7188 18.25 7.52778C18.25 4.3368 15.6756 1.75 12.5 1.75C9.32436 1.75 6.75 4.3368 6.75 7.52778C6.75 10.7188 9.32436 13.3056 12.5 13.3056Z"
+                          stroke="#9A9CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+        </div>
+    </header>
+    <section class="content">
+        <div class="title">
+            <div class="title__text">Система рекламной сети на умных остановках</div>
+            <button class="title__btn">Оставить заявку на рекламу</button>
+        </div>
+        <div class="right">
+            <img src="{% static  'img/main.png'%}" alt="">
+        </div>
+    </section>
+</div>
+
+
+<!--	<div class="root">-->
+
+<!--	</div>-->
+<!--	<div class="login">-->
+<!--		<form action="/auth," mrtod="POST">-->
+<!--			<input type="usrername"/>-->
+<!--			<input type="password"/>-->
+<!--			</form>-->
+
+
+<!--	</div>-->
+
+</body>
+</html>

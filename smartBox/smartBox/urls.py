@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
-from  taskList import views as task
+import main, infoBox
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
+    path('', main.views.Home, name='home'),
+    path('dashboard/', infoBox.views.content, name='dashboard')
 ]

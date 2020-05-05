@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from taskList.models import TaskList
 from django.http import Http404
 
 
